@@ -1,4 +1,5 @@
 import axios from "axios"
+import { API_URL } from "../../config";
 
 const fetchMyLawyer=async(token)=>{
     const options={
@@ -6,7 +7,7 @@ const fetchMyLawyer=async(token)=>{
             authorization:`Bearer ${token}`
         }
     }
-    const response=await axios.get('/api/mylawyer',options);
+    const response=await axios.get(`${API_URL}/api/mylawyer`,options);
     return response.data;
 }
 

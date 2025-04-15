@@ -1,4 +1,5 @@
 import axios from "axios"
+import { API_URL } from "../../config";
 
 const fetchAllClients=async(token)=>{
     const options={
@@ -6,7 +7,7 @@ const fetchAllClients=async(token)=>{
             authorization:`Bearer ${token}`
         }
     }
-    const response=await axios.get('/api/lawyer/clients',options);
+    const response=await axios.get(`${API_URL}/api/lawyer/clients`,options);
     return response.data
 }
 const fetchAllComplaints=async(token)=>{
@@ -16,7 +17,7 @@ const fetchAllComplaints=async(token)=>{
             authorization:`Bearer ${token}`
         }
     }
-    const response=await axios.get('/api/lawyer/complaints',options);
+    const response=await axios.get(`${API_URL}/api/lawyer/complaints`,options);
     return response.data
 }
 

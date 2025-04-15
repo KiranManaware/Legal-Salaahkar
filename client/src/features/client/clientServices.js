@@ -1,11 +1,12 @@
 import axios from "axios"
+import { API_URL } from "../../config";
 const fetchAllLawyers=async(token)=>{
     const options={
         headers:{
             authorization:`Bearer ${token}`
         }
     }
-    const response=await axios.get('/api/client',options);
+    const response=await axios.get(`${API_URL}/api/client`,options);
     return response.data
 }
 
@@ -15,7 +16,7 @@ const fetchLawyer=async(id,token)=>{
             authorization:`Bearer ${token}`
         }
     }
-    const response=await axios.get(`/api/client/${id}`,options);
+    const response=await axios.get(`${API_URL}/api/client/${id}`,options);
     return response.data
 }
 

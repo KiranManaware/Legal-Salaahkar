@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API_URL } from "../../config";
 
 const fetchComments=async(id,token)=>{
     const options={
@@ -7,7 +8,7 @@ const fetchComments=async(id,token)=>{
         }
     }
    
-    const response=await axios.get(`/api/complaints/${id}/comments`,options);
+    const response=await axios.get(`${API_URL}/api/complaints/${id}/comments`,options);
     return response.data;
 
     
@@ -20,7 +21,7 @@ const addComment=async(fromData,token)=>{
         }
     }
    
-    const response=await axios.post(`/api/complaints/${fromData.id}/comments`,fromData,options);
+    const response=await axios.post(`${API_URL}/api/complaints/${fromData.id}/comments`,fromData,options);
     return response.data;
 
 
