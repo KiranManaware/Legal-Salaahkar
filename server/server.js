@@ -2,12 +2,14 @@ const express = require('express');
 const connectDB = require('./config/db_config');
 const errorHandler = require('./middlewares/errorHandler');
 const lawyerProtect = require('./middlewares/LawyerMiddleware');
+const cors=require('cors')
 
 require('dotenv').config();
 const app=express();
 const PORT=process.env.PORT||2000;
 
-
+//cors enable
+app.use(cors({allwOrigin:"*"}))
 
 // DB CONNECTION
 connectDB()
