@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import fetchUsers from "./adminService";
-import { get } from "mongoose";
 
 const adminSlice = createSlice({
   name: "admin",
