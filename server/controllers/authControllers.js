@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const register = asyncHandler(async (req, res) => {
   const { name, email, password, isLawyer } = req.body;
 
-  if (!name || !email || !password || !isLawyer) {
+  if (!name || !email || !password ||!isLawyer ) {
     res.status(400);
     throw new Error("Please Fill All Details");
   }

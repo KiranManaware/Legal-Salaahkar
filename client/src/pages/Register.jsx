@@ -34,10 +34,8 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password != password2) {
-      console.log("password mismatched")
       toast.error("password Mismatched")
     } else {
-      console.log(formData);
       dispatch(registerUser(formData));
     }
     // setFormData({
@@ -93,7 +91,7 @@ const Register = () => {
           value={isLawyer}
           onChange={handleChange}
           type="text"
-          placeholder="Are you lawyer if yes fill true otherwise skip it"
+          placeholder="Are you lawyer ? if yes fill true otherwise fill false"
           className="my-2 border-2 border-gray-400 p-3 w-full disabled:bg-sky-100 text-sm"
         />
         <input

@@ -21,7 +21,7 @@ const userSchema=new mongoose.Schema({
     },
     isLawyer:{
         type:Boolean,
-        required:true
+        required:true,
     },
 },{
     timestamps:true
