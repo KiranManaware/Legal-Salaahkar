@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import BackButton from "../components/BackButton";
 import bgImage from "../assets/hero.jpg";
-import ComplaintComponent from "../components/complaintComponent";
+import ComplaintComponent from "../components/ComplaintComponent";
 import { useDispatch, useSelector } from "react-redux";
 import { getComplaints } from "../features/complaint/complaintSlice";
 import { toast } from "react-toastify";
