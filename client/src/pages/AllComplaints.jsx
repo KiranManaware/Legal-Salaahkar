@@ -48,7 +48,8 @@ const AllComplaints = () => {
 
       <h1 className="text-center text-4xl mb-10  font-bold">All Complaints</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
+      {
+        complaints.length===0?<h3 className="text-center p-3  text-3xl   font-bold">No Complaints Yet !!!!</h3>: <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
         {allComplaints.map((complaint) => (
           <ComplaintComponent key={complaint?._id} complaint={complaint} />
         ))}
@@ -56,6 +57,9 @@ const AllComplaints = () => {
           <ComplaintComponent key={complaint?._id} complaint={complaint} />
         ))}
       </div>
+      }
+
+     
     </div>
   );
 };
