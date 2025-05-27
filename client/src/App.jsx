@@ -16,6 +16,7 @@ import AllClients from "./pages/AllClients";
 import LawyerDashboard from "./pages/LawyerDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import ClientDashboards from "./pages/ClientDashboards";
+import PageNotFound from "./pages/PageNotFound";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<PageNotFound/>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<PrivateComponent />}>
